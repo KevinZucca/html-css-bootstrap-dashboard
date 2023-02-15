@@ -1,0 +1,32 @@
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: blue;
+}
+
+._main-part {
+    height: calc(100vh - 70px);
+    width: 100%;
+    background-color: #f3f69a;
+}
+
+aside {
+    height: 100%;
+    width: 150px;
+    background-color: rgb(127, 127, 174);
+}
+
+
+header {
+    width: calc(100vw - 150px);
+    height: 10%;
+    background-color: #1b72e8;
+}
+
+main {
+    height: 90%;
+    width: calc(100vw - 150px);
+    background-color: #fff;
+}
+
+
