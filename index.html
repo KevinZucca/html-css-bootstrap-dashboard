@@ -45,7 +45,10 @@
 
 
     <div class="_main-part d-flex">
-        <aside>
+
+        <!-- ASIDE -->
+
+        <aside class="d-flex flex-column justify-content-between">
             <ul class="p-4 text-white">
                 <li class="d-flex gap-3">
                     <div class="aside_logo">
@@ -71,15 +74,57 @@
                         <p>Signals</p>
                     </div>
                 </li>
-            </ul>            
+            </ul>     
+
+            <ul class="p-4 text-white">
+                <li class="d-flex gap-3">
+                    <div class="aside_logo">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <div class="aside_p">
+                        <p>Admin</p>
+                    </div>
+                </li>  
+            </ul>     
         </aside>
-       
+
+        <!-- //ASIDE -->
     
+
+
+        <!-- HEADER AND MAIN -->
         <div class="right_side d-flex flex-column overflow-y-scroll overflow-x-hidden">
             <header>
-    
+                <div class="row row-cols-3">
+                    <div class="col-6 p-3">
+                        <div class="boolean_up d-flex">
+                            <h1>Boolean</h1>
+                            <button>Piano Blaze</button>
+                        </div>
+                        <div class="boolean_down d-flex">
+                            <button>Piano Blaze</button>
+                            <button>Piano Blaze</button>
+                            <button>Piano Blaze</button>
+                            <button>Piano Blaze</button>
+                        </div>
+                    </div>
+                    <div class="col-4 p-3 d-flex flex-column">
+                        <h5>Studenti online negli ultimi 30 minuti</h5>
+                        <h3>125</h3>
+                    </div>
+                    <div class="col-2 d-flex gap-2 p-3">
+                        <div id="new_student_p">
+                            <p>Nuovo studente</p>
+                        </div>
+                        <div id="new_student_plus">
+                            <i class="fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
             </header>
-        
+            
+           
+            
             <main>
         
             </main>
