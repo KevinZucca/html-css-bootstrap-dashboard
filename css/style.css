@@ -2,7 +2,6 @@ body {
     overflow-x: hidden;
 }
 
-
 nav {
     height: 70px;
     width: 100%;
@@ -31,6 +30,9 @@ nav ul li {
     list-style-type: none;
 }
 
+
+
+
 ._main-part {
     height: calc(100vh - 70px);
     width: 100%;
@@ -58,9 +60,13 @@ header a {
 }
 
 main {
-    height: calc(100% - 125px);
+    height: 100%;
     width: calc(100vw - 150px);
     background-color: #fff;
 }
 
+main .logo_class {
+    width: 1.5em;
+    height: 1.5em;
+}
 
