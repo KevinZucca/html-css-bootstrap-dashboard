@@ -38,7 +38,7 @@ nav ul li {
 }
 
 aside {
-    height: 100%;
+    height: calc(100vh - 70px);
     width: 150px;
     background-image: -webkit-linear-gradient(40deg, #0e263b 75%, #051e34 25%);
 }
@@ -48,6 +48,13 @@ header {
     width: calc(100vw - 150px);
     height: 125px;
     background-color: #1b72e8;
+}
+
+header a {
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #165bba;
+    padding: 2px 5px;
 }
 
 main {
