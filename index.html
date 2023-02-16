@@ -20,13 +20,13 @@
                 <a href="#"><img id="logo" src="img/logo.svg" class="img-fluid d-none d-lg-flex" alt="boolean-logo"></a>
                 <a href="#"><img id="small_logo" src="img/mobile-logo.png" class="img-fluid d-lg-none" alt=""></a>
             </div>
-            <div class="col-10 p-3">
+            <div class="col-9 col-lg-10 p-3 px-0">
                 <div class="search position-relative">
                     <input type="search" placeholder="Prova a cercare lezioni di Laravel" class="w-100">
                     <i id="magnifing-glass" class="fa-solid fa-magnifying-glass position-absolute"></i>
                 </div>
             </div>
-            <div class="col-1 p-2">
+            <div class="col-2 col-lg-1 p-2 column_bell ps-0">
                 <ul class="d-flex justify-content-between align-items-center">
                     <li class="d-none d-lg-flex"><i class="fa-solid fa-list"></i></li>
                     <li class="d-none d-lg-flex"><i class="fa-solid fa-circle-question"></i></li>
@@ -107,7 +107,7 @@
         <!-- HEADER AND MAIN -->
         <div class="right_side d-flex flex-column overflow-y-scroll overflow-x-hidden">
             <header class="text-white">
-                <div class="row row-cols-3">
+                <div class="row row-cols-lg-3 row-cols-1 d-flex flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 p-3">
                         <div class="boolean_up d-flex align-items-center gap-2">
                             <h1>Boolean</h1>
@@ -212,8 +212,8 @@
                                 <thead>
                                   <tr>
                                     <th scope="col" class="pt-4">Nome</th>
-                                    <th scope="col">Data inizio</th>
-                                    <th scope="col">ROI</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">Data inizio</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">ROI</th>
                                     <th scope="col">Stato</th>
                                     <th scope="col">Azioni</th>
                                   </tr>
@@ -349,7 +349,7 @@
                         </div>
                 
                         <!-- SECOND CARD -FIRST COLUMN -->
-                          <div class="card">
+                          <div class="card mb-4">
                             <div class="card-header">
                               <h2>F.A.Q.</h2>
                             </div>

@@ -6,16 +6,18 @@ nav {
     height: 70px;
     width: 100%;
     background-color: #f8f9fa;
+    position: relative;
 }
 
 nav #magnifing-glass {
-    top: 20%;
+    top: 35%;
     left: 0;
     padding-left: 10px;
 }
 
 nav input {
     width: 100%;
+    height: 38px;
     padding-left: 30px;
     background-color: #e5e5e5;
     border: none;
@@ -25,14 +27,18 @@ nav input {
 nav #logo {
     max-width: 300px;
     width: 100%;
-    position: relative;
+    height: 38px;
 }
 
 nav #small_logo {
     width: 3em;
     position: absolute;
     top: 5px;
-    left: 10px;
+    left: 0;
+}
+
+nav ul {
+    background: #ffffff;
 }
 
 
@@ -56,6 +62,32 @@ nav #_bell {
     background-color: #f3f69a;
 }
 
+
+header {
+    width: 100%;
+    min-height: 125px;
+    background-color: #1b72e8;
+}
+
+
+header a {
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #165bba;
+    padding: 2px 5px;
+}
+
+
+header #canvas-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#offcanvasRight {
+    max-width:45%;
+    width: 100%;
+}
+
 aside {
     height: calc(100vh - 70px);
     width: 150px;
@@ -71,23 +103,7 @@ aside ul li:hover{
 }
 
 
-header {
-    width: 100%;
-    height: 125px;
-    background-color: #1b72e8;
-}
 
-header a {
-    text-decoration: none;
-    border-radius: 20px;
-    background-color: #165bba;
-    padding: 2px 5px;
-}
-
-header #canvas-button:hover {
-    background-color: white;
-    color: black;
-}
 
 main {
     width: 100%;
@@ -117,6 +133,20 @@ main .my-table th:not(:first-child) {
     header {
         font-size: 0.7em;
     }
-    
+
+    aside {
+        max-width: 50px;
+        align-items: center;
+    }
+
+  .column_bell {
+    max-width: 90px;
+  }  
+
+  #offcanvasRight {
+    max-width:100%;
+    width: 100%;
+}
+
 }
 
