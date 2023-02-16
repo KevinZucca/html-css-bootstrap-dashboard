@@ -16,9 +16,11 @@
 
     <nav>
         <div class="row row-cols-3 d-flex justify-content-between">
-            <div class="col-1 d-flex p-3">
-                <a href="#"><img id="logo" src="img/logo.svg" class="img-fluid d-none d-lg-flex" alt="boolean-logo"></a>
-                <a href="#"><img id="small_logo" src="img/mobile-logo.png" class="img-fluid d-lg-none" alt=""></a>
+            <div class="col-1 d-flex pt-3 pe-0">
+                <div id="logo_boolean">
+                    <a href="#"><img id="logo" src="img/logo.svg" class="img-fluid d-none d-lg-flex p-1" alt="boolean-logo"></a>
+                    <a href="#"><img id="small_logo" src="img/mobile-logo.png" class="img-fluid d-flex d-lg-none pt-1" alt=""></a>
+                </div>
             </div>
             <div class="col-9 col-lg-10 p-3 px-0">
                 <div class="search position-relative">
@@ -26,7 +28,7 @@
                     <i id="magnifing-glass" class="fa-solid fa-magnifying-glass position-absolute"></i>
                 </div>
             </div>
-            <div class="col-2 col-lg-1 p-2 column_bell ps-0">
+            <div class="col-2 col-lg-1 p-2 column_bell ps-0 pt-3">
                 <ul class="d-flex justify-content-between align-items-center">
                     <li class="d-none d-lg-flex"><i class="fa-solid fa-list"></i></li>
                     <li class="d-none d-lg-flex"><i class="fa-solid fa-circle-question"></i></li>
@@ -107,8 +109,8 @@
         <!-- HEADER AND MAIN -->
         <div class="right_side d-flex flex-column overflow-y-scroll overflow-x-hidden">
             <header class="text-white">
-                <div class="row row-cols-lg-3 row-cols-1 d-flex flex-column-reverse flex-lg-row">
-                    <div class="col-lg-6 p-3">
+                <div class="row row-cols-sm-3 row-cols-1 d-flex flex-column flex-sm-row">
+                    <div class="col-sm-6 p-3 order-1 order-sm-0">
                         <div class="boolean_up d-flex align-items-center gap-2">
                             <h1>Boolean</h1>
                             <a class="text-white" href="#">Piano Blaze</a> 
@@ -122,11 +124,11 @@
                             <a class="text-white d-none d-lg-flex" href="#">Boolean blog app</a>
                         </div>
                     </div>
-                    <div class="col-lg-4 p-3 d-flex flex-column">
+                    <div class="col-sm-4 p-3 d-flex flex-column order-2 order-sm-1">
                         <h5>Studenti online negli ultimi 30 minuti</h5>
                         <h3>125</h3>
                     </div>
-                    <div class="col-lg-2 d-flex gap-2 p-3">
+                    <div class="col-sm-2 d-flex gap-2 p-3 order-0 order-sm-2">
                         <div id="new_student_p">
                             <p>Nuovo studente</p>
                         </div>
@@ -145,49 +147,80 @@
                         <div class="offcanvas-body my-offcanvas">
                             <form>
                                 <div class="row row-cols-2">
-                                    <div class="col-6">
+                                    <div class="col-6 mb-3">
                                         <label for="validationCustom01" class="form-label">Nome</label>
                                         <input type="text" class="form-control" id="validationCustom01" value="" required>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-6 mb-3">
                                         <label for="validationCustom02" class="form-label">Cognome</label>
                                         <input type="text" class="form-control" id="validationCustom02" value="" required>
                                     </div>
-                                   <div class="col-6">
+                                   <div class="col-6 mb-3">
                                     <label for="validationCustomUsername" class="form-label">Email</label>
                                         <div class="input-group has-validation">
                                             <span class="input-group-text" id="inputGroupPrepend">@</span>
                                             <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                                              <div class="invalid-feedback">
                                             Please choose a username.
+                                            </div>
                                         </div>
                                    </div>
-                                   <div class="col-6">
-                                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                   <div class="col-6 mb-3">
+                                        <label for="inputPassword5" class="form-label">Password</label>
+                                        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
                                    </div>
-                                   <div class="col-6">
-                                    <label for="validationCustomUsername" class="form-label">Email</label>
+                                   <div class="col-6 mb-3">
+                                    <label for="validationCustomUsername" class="form-label">Indirizzo-Email</label>
                                         <div class="input-group has-validation">
                                             <span class="input-group-text" id="inputGroupPrepend">@</span>
                                             <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                                              <div class="invalid-feedback">
                                             Please choose a username.
+                                            </div>
                                         </div>
                                    </div>
                                    <div class="col-6">
-                                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                        <label for="inputPassword5" class="form-label">Password</label>
+                                        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
                                    </div>
+                                   <div class="col-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">Indirizzo</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="validationCustom01" class="form-label">Città</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <label for="validationCustom01" class="form-label">Stato</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Scegli...</option>
+                                            <option value="1">Valle della disperazione</option>
+                                            <option value="2">Confusionario</option>
+                                            <option value="3">D'ebrezza</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-2 mb-3">
+                                        <label for="validationCustom01" class="form-label">CAP</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">Foto</label>
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                                          </div>
+                                    </div>
+                                
 
 
                                </div>
          
                                 <div class="mb-3 form-check">
                                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                  <label class="form-check-label" for="exampleCheck1">Seleziona per proseguire</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Salva</button>
+                                <button type="button" class="btn btn-warning fw-bold">Svuota</button>
                               </form>
                         </div>
                         </div>
@@ -223,8 +256,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 75
                                     </td>
-                                    <td>15 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">15 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-success">Done</button>
                                     </td>
@@ -238,8 +271,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 76
                                     </td>
-                                    <td>16 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">16 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-success">Done</button>
                                     </td>
@@ -254,8 +287,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 77
                                     </td>
-                                    <td>17 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">17 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-warning text-white">Process</button>
                                     </td>
@@ -269,8 +302,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 78
                                     </td>
-                                    <td>18 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">18 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-success">Done</button>
                                     </td>
@@ -284,8 +317,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 79
                                     </td>
-                                    <td>19 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">19 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-danger">failed</button>
                                     </td>
@@ -300,8 +333,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 80
                                     </td>
-                                    <td>20 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">20 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-success">Done</button>
                                     </td>
@@ -316,8 +349,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 81
                                     </td>
-                                    <td>21 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">21 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-danger">failed</button>
                                     </td>
@@ -332,8 +365,8 @@
                                     <td>
                                         <img src="img/class-avatar-removebg-preview.png" class="img-fluid logo_class"  alt=""> Classe 82
                                     </td>
-                                    <td>15 Feb 2021</td>
-                                    <td>20%</td>
+                                    <td class="d-none d-sm-table-cell">15 Feb 2021</td>
+                                    <td class="d-none d-sm-table-cell">20%</td>
                                     <td>
                                         <button type="button" class="btn btn-success">Done</button>
                                     </td>

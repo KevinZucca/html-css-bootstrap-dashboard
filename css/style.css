@@ -24,6 +24,11 @@ nav input {
     border-radius: 6px;
 }
 
+nav #logo_boolean {
+    height: 38px;
+    background-color: #fff;
+}
+
 nav #logo {
     max-width: 300px;
     width: 100%;
@@ -59,13 +64,11 @@ nav #_bell {
 ._main-part {
     height: calc(100vh - 70px);
     width: 100%;
-    background-color: #f3f69a;
 }
 
 
 header {
     width: 100%;
-    min-height: 125px;
     background-color: #1b72e8;
 }
 
@@ -76,6 +79,7 @@ header a {
     background-color: #165bba;
     padding: 2px 5px;
 }
+
 
 
 header #canvas-button:hover {
@@ -108,6 +112,7 @@ aside ul li:hover{
 main {
     width: 100%;
     background-color: #fff;
+    flex-grow: 1;
 }
 
 main .logo_class {
