@@ -66,6 +66,10 @@ aside p:hover {
     cursor: pointer;
 }
 
+aside ul li:hover{
+    background-color: #828f98;
+}
+
 
 header {
     width: 100%;
@@ -78,6 +82,11 @@ header a {
     border-radius: 20px;
     background-color: #165bba;
     padding: 2px 5px;
+}
+
+header #canvas-button:hover {
+    background-color: white;
+    color: black;
 }
 
 main {
@@ -99,6 +108,7 @@ main .my-table th:not(:first-child) {
     width:100px;
     text-align: center;
 }
+
 
 
 

@@ -15,23 +15,34 @@
     <!-- NAVBAR -->
 
     <nav>
-        <div class="row row-cols-3 d-flex justify-content-between  p-3">
-            <div class="col-1 d-flex">
+        <div class="row row-cols-3 d-flex justify-content-between">
+            <div class="col-1 d-flex p-3">
                 <a href="#"><img id="logo" src="img/logo.svg" class="img-fluid d-none d-lg-flex" alt="boolean-logo"></a>
                 <a href="#"><img id="small_logo" src="img/mobile-logo.png" class="img-fluid d-lg-none" alt=""></a>
             </div>
-            <div class="col-10">
+            <div class="col-10 p-3">
                 <div class="search position-relative">
                     <input type="search" placeholder="Prova a cercare lezioni di Laravel" class="w-100">
                     <i id="magnifing-glass" class="fa-solid fa-magnifying-glass position-absolute"></i>
                 </div>
             </div>
-            <div class="col-1">
-                <ul class="d-flex justify-content-between">
+            <div class="col-1 p-2">
+                <ul class="d-flex justify-content-between align-items-center">
                     <li class="d-none d-lg-flex"><i class="fa-solid fa-list"></i></li>
                     <li class="d-none d-lg-flex"><i class="fa-solid fa-circle-question"></i></li>
                     <li class="d-none d-lg-flex"><i class="fa-solid fa-ellipsis-vertical"></i></li>
-                    <li><i id="_bell" class="fa-solid fa-bell"></i></li>
+                    <li>
+                        <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i id="_bell" class="fa-solid fa-bell"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Profilo</a></li>
+                          <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                          <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                      </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,7 +62,7 @@
 
         <aside class="d-flex flex-column justify-content-between">
             <ul class="p-4 text-white">
-                <li class="d-flex gap-3">
+                <li class="d-flex gap-3 p-1">
                     <div class="aside_logo">
                         <i class="fa-solid fa-house"></i>
                     </div>
@@ -59,7 +70,7 @@
                         <p>Home</p>
                     </div>
                 </li>
-                <li class="d-flex gap-3">
+                <li class="d-flex gap-3 p-1">
                     <div class="aside_logo">
                         <i class="fa-solid fa-chart-simple"></i>
                     </div>
@@ -67,7 +78,7 @@
                         <p>Stats</p>
                     </div>
                 </li>
-                <li class="d-flex gap-3">
+                <li class="d-flex gap-3 p-1">
                     <div class="aside_logo">
                         <i class="fa-solid fa-chart-simple"></i>
                     </div>
@@ -119,7 +130,11 @@
                         <div id="new_student_p">
                             <p>Nuovo studente</p>
                         </div>
-                        <button class="btn btn-primary h-50 border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-plus"></i></button>
+
+
+
+
+                        <button id="canvas-button" class="btn btn-primary h-50 border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-plus"></i></button>
 
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
@@ -127,34 +142,47 @@
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
 
-                        <div class="offcanvas-body">
+                        <div class="offcanvas-body my-offcanvas">
                             <form>
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <div class="row row-cols-2">
+                                    <div class="col-6">
+                                        <label for="validationCustom01" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="" required>
                                     </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                      </div>
-                                </div>
-                                
-                                
-                                
-                                  <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                  </div>
-                                <div class="mb-3">
-                                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                                  <input type="password" class="form-control" id="exampleInputPassword1">
-                                </div>
+                                    <div class="col-6">
+                                        <label for="validationCustom02" class="form-label">Cognome</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value="" required>
+                                    </div>
+                                   <div class="col-6">
+                                    <label for="validationCustomUsername" class="form-label">Email</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                             <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                   </div>
+                                   <div class="col-6">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                   </div>
+                                   <div class="col-6">
+                                    <label for="validationCustomUsername" class="form-label">Email</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                             <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                   </div>
+                                   <div class="col-6">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                   </div>
+
+
+                               </div>
+         
                                 <div class="mb-3 form-check">
                                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -333,7 +361,7 @@
                                     </button>
                                   </h2>
                                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                    <div class="accordion-body">Clicca sul + in alto nella sezione blu. </div>
                                   </div>
                                 </div>
                                 <div class="accordion-item">
@@ -343,7 +371,7 @@
                                     </button>
                                   </h2>
                                   <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                    <div class="accordion-body">Clicca sull'icona della campanella.</div>
                                   </div>
                                 </div>
                                 <div class="accordion-item">
@@ -353,7 +381,7 @@
                                     </button>
                                   </h2>
                                   <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                    <div class="accordion-body">Se non crasha tutto anche sì, sennò ti porti in giro il pc e amen. </div>
                                   </div>
                                 </div>
                               </div>
